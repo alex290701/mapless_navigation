@@ -41,7 +41,7 @@
     <param name="world_frame" value="map"/>
   </node>
 
-  <node name="landmark_spawner" pkg="model_description" type="landmark.py" />
+  <node name="spawn_cubes" pkg="model_description" type="spawn_cubes" />
 
   <include file="$(find robot_navigation)/launch/robot_navigation.launch">
     <arg name="no_static_map" value="true" />
