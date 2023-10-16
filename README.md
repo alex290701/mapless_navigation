@@ -15,6 +15,8 @@ I have created a simulation of a diff drive robot with a LIDAR sensor. A python 
 /landmark_distance
 /landmark_spawner
 /move_base
+/obstacle_distance_calculator
+/random_goal_generator
 /robot_state_publisher
 /rosout
 ```
