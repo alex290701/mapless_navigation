@@ -65,7 +65,7 @@ class CubeSpawner():
 
 if __name__ == "__main__":
     print("Waiting for gazebo services...")
-    rospy.init_node("spawn_cubes")
+    rospy.init_node("landmark_spawner")
     rospy.wait_for_service("/gazebo/delete_model")
     rospy.wait_for_service("/gazebo/spawn_urdf_model")
 
