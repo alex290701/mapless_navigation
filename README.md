@@ -46,7 +46,7 @@ Start generating random goal points and send it to the navigation stack
 ```
 rosrun robot_navigation move.py 
 ```
-
+![screenshot](Screenshot.png)
 
 ### Limitations:
 The random goal point generator node currently generates points that are inside the lanmark region. It can be optimised in the future scope.
