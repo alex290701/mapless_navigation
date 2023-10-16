@@ -161,7 +161,7 @@ private:
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "spawn_cubes");
+    ros::init(argc, argv, "landmark_spawner");
     ros::NodeHandle nh;
     CubeSpawner cs(nh);
     // ros::shutdown();
