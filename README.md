@@ -2,11 +2,12 @@
 
 Ros: Melodic-desktop-full
 
-## Summary:
+### Summary:
 
 I have created a simulation of a diff drive robot with a LIDAR sensor. A python code generates random landmarks in cube shapes. The distance between the landmarks are not less than 1m. I have added the error to the LIDAR as well as the Covariance. Used EKF package for sensor fusion and localisation. Plotted both odometry(yellow) only and the filtered odometry(red) to compare the effectiveness.
 
-## Nodes list:
+### Nodes list:
+```
 /ekf_localization_node
 /gazebo
 /gazebo_gui
@@ -16,8 +17,8 @@ I have created a simulation of a diff drive robot with a LIDAR sensor. A python 
 /move_base
 /robot_state_publisher
 /rosout
-
-## To Run:
+```
+### To Run:
 
 Build and source it
 ```
@@ -29,7 +30,7 @@ Start the gazebo
 ```
 roslaunch model_description gazebo.launch
 ```
-This file starts all the basic nodes for spawning the model and the landmarks.It also starts the node to calculate the distace of a landmark in x,y if its closer that 0.3m.To see that you can always echo the topic ```/landmark_distance```.
+This file starts all the basic nodes for spawning the model and the landmarks.It also starts the node to calculate the distace of a landmark in x,y if its closer than a certain distance(0.3m in this case).To see that you can always echo the topic ```/landmark_distance```.
 ```
 rostopic echo /landmark_distance
 ```
@@ -45,5 +46,5 @@ rosrun robot_navigation move.py
 ```
 
 
-## Limitations:
+### Limitations:
 The random goal point generator node currently generates points that are inside the lanmark region. It can be optimised in the future scope.
